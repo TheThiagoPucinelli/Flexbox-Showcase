@@ -1,0 +1,72 @@
+* {
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+body {
+    padding-top: 50px;
+    text-align: center;
+    background-image: -webkit-linear-gradient(rgb(254, 255, 221), rgba(0, 140, 255, 0.521));
+}
+
+h1 {
+    margin-bottom: 50px;
+    text-decoration:underline ;}
+
+h3{margin-top: 10px;
+margin-bottom: 5px;}
+
+p{margin-top: 20px;}
+
+section {
+    margin-bottom: 40px;
+    border: 2px solid black;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.container {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#black{
+    
+    color: aliceblue;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+}
+.item {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    overflow: hidden;
+}
+
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* Flexbox*/
+
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+
+.flex-start { justify-content: flex-start; }
+.center { justify-content: center; }
+.space-between { justify-content: space-between; }
+
+.wrap { flex-wrap: wrap; }
+
+.stretch { align-items: stretch; } /* A classe .stretch define o alinhamento padrão (por meio de align-items: stretch) para os itens do contêiner,
+                                      e os valores do align-self nos itens individuais sobrescrevem esse padrão quando necessário.*/

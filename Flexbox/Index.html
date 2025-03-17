@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Variações de Flexbox</title>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="/Cubo.webp" type="image/x-icon">
+</head>
+<body>
+
+  <h1>Variações de Flexbox</h1>
+
+  <!-- flex-direction: row alinha os itens horizontalmente, da esquerda para a direita (padrão). -->
+  <h2>Direção em Linha (row)</h2>
+  <h3>{ flex-direction: row; }</h3>
+  <section>
+    <div class="container row">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+  <!-- flex-direction: column alinha os itens verticalmente, de cima para baixo. -->
+  <h2>Direção em Coluna (column)</h2>
+  <h3>{ flex-direction: column; }</h3>
+  <section>
+    <div class="container column">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+  <!-- justify-content: flex-start alinha os itens no início do eixo principal. -->
+  <h2>Alinhamento no Início (flex-start)</h2>
+  <h3>{ justify-content: flex-start; }</h3>
+  <section>
+    <div class="container flex-start">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+  <!-- justify-content: center alinha os itens no centro do eixo principal. -->
+  <h2>Alinhamento no Centro</h2>
+  <h3>{ justify-content: center; }</h3>
+  <section>
+    <div class="container center">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+  <!-- justify-content: space-between distribui os itens com espaçamento igual entre eles. -->
+  <h2>Distribuição com Espaçamento (space-between)</h2>
+  <h3>{ justify-content: space-between; }</h3>
+  <section>
+    <div class="container space-between">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+  <!-- flex-wrap: wrap permite que os itens que não cabem se movam para a próxima linha. -->
+  <h2>Quebra de Linha (wrap)</h2>
+  <h3>{ flex-wrap: wrap; }</h3>
+  <section>
+    <div class="container wrap">
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+      <div class="item"><img src="/Cubo.webp" alt=""></div>
+    </div>
+  </section>
+
+ <!-- align-self permite que um item seja alinhado individualmente no eixo transversal de várias formas -->
+ <h2>Alinhamento Individual (align-self)</h2>
+ <h3>{align-self: flex-start;} <br>
+   {align-self: center;} <br>
+   {align-self: flex-end;}
+ </h3>
+ <section>
+   <div class="container stretch">
+     <div class="item" style="align-self: flex-start;"><img src="/Cubo.webp" alt=""></div>
+     <div class="item" style="align-self: center;"><img src="/Cubo.webp" alt=""></div>
+     <div class="item" style="align-self: flex-end;"><img src="/Cubo.webp" alt=""></div>
+   </div>
+ </section>
+
+  <!-- order altera a ordem dos itens dentro do contêiner. -->
+  <h2>Posição (Order)</h2>
+  <h3>{order:2;} "2" <br>{order:1;} "3" <br>{order:3;} "1"</h3>
+  <section>
+      <div class="container">
+          <div class="item" id="black" style="order: 2;"><p>2</p></div>
+          <div class="item" id="black" style="order: 1;"><p>3</p></div>
+          <div class="item" id="black" style="order: 3;"><p>1</p></div>
+      </div>
+  </section>
+
+  <!-- flex-grow permite que os itens cresçam ocupando o espaço disponível. -->
+  <h2>Crescimento Flexível (flex-grow)</h2>
+  <h3>{flex-grow: 1;} "1"<br>{flex-grow: 3;} "2"<br>{flex-grow: 2;} "3"</h3>
+  <section>
+    <div class="container">
+      <div class="item" id="black" style="flex-grow: 1;"><p>1</p></div>
+      <div class="item" id="black"  style="flex-grow: 3;"><p>2</p></div>
+      <div class="item" id="black"  style="flex-grow: 2;"><p>3</p></div>
+    </div>
+  </section>
+
+  <!-- flex-basis define o tamanho inicial dos itens antes de crescer ou encolher. -->
+  <h2>Tamanho Inicial (flex-basis)</h2>
+  <h3>{flex-basis: 100px;}<br>{flex-basis: 150px;}<br>{flex-basis: 200px;} <br></h3>
+  <section>
+    <div class="container">
+      <div class="item" id="black"  style="flex-basis: 100px;"><p>1</p></div>
+      <div class="item" id="black"  style="flex-basis: 150px;"><p>2</p></div>
+      <div class="item" id="black"  style="flex-basis: 200px;"><p>3</p></div>
+    </div>
+  </section>
+
+  <!-- flex-shrink controla a capacidade dos itens de encolher quando não há espaço suficiente com ordem do maior para o menor  -->
+<h2>Encolhimento (flex-shrink)</h2>
+<h3>{flex-shrink: 1;} "1" <br> {flex-shrink: 2;} "2" <br> {flex-shrink: 3;} "3"</h3>
+<section>
+  <div class="container shrink">
+    <div class="item" id="black" style="flex-shrink: 1;"><p>1</p></div>
+    <div class="item" id="black" style="flex-shrink: 2;"><p>2</p></div>
+    <div class="item" id="black" style="flex-shrink: 3;"><p>3</p></div>
+  </div>
+</section>
+
+
+</body>
+</html>
